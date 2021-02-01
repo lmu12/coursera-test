@@ -1,0 +1,104 @@
+
+/********** Base Styles **********/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+div {
+  padding: 10px;
+  margin:0px;
+  float: left;
+}
+
+section {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #D3D3D3;
+  position:relative; 
+}
+
+p {
+  padding: 10px;
+  margin-top: 40px;
+  background-color: #D3D3D3;
+}
+
+h1 {
+  margin-bottom:15px;
+  text-align: center;
+
+}
+
+h2 {
+  position: absolute;
+  top:0;
+  right:0;
+  border: 1px solid black;
+  padding: 8px;
+  margin-bottom:5px;
+  margin-top: 0px;
+  width: 140px;
+  text-align:center;
+}
+
+#chicken {
+  background-color:#800000;
+  color: white;
+}
+
+#beef {
+  background-color: #CD853F;
+}
+
+#sushi {
+  background-color:#808000;
+  color:white;
+}
+
+
+/********** Desktop Style **********/  
+@media (min-width: 992px) {
+  div {
+    width: 33.33%;
+    float: left;
+  }
+  
+}
+
+
+/********** Tablet Style **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  
+  #c1 {
+    width: 50%;
+    float: left
+  }
+  #c2 {
+    width: 50%;
+    float: left;
+  }
+ 
+  #c3 {
+    clear:left;
+  }
+
+}
+
+/********** Mobile Style **********/
+@media (max-width: 767px) {
+  #c1 {
+    width: 100%;
+    clear: left;
+  }
+  #c2 {
+    width: 100%;
+  }
+  #c3 {
+  	width: 100%;
+	}
+ 
+}
