@@ -113,14 +113,13 @@ function buildAndShowHomeHTML (categories) {
       // $dc.loadMenuItems('L')
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
-      //
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",chosenCategoryShortName);
-
+      // 
+      homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,"randomCategoryShortName","'" +chosenCategoryShortName+ "'");
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
-      insertHtml("#main-content", homeHtmlToInsertIntoMainPage)
+     insertHtml("#main-content", homeHtmlToInsertIntoMainPage)
 
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
@@ -189,6 +188,7 @@ function buildCategoriesViewHtml(categories,
                                  categoryHtml) {
 
   var finalHtml = categoriesTitleHtml;
+  console.log("start final html: " + finalHtml);
   finalHtml += "<section class='row'>";
 
   // Loop over categories
@@ -204,10 +204,14 @@ function buildCategoriesViewHtml(categories,
                      "short_name",
                      short_name);
     finalHtml += html;
+
+   console.log("Loop final html: " + finalHtml);
   }
 
   finalHtml += "</section>";
+  console.log("end of final html: " + finalHtml);
   return finalHtml;
+
 }
 
 
